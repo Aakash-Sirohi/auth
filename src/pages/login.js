@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Login(){
@@ -8,7 +8,7 @@ export default function Login(){
     // }
     const [username,setUserName] = useState('');
     const [password,setPassword] = useState('');
-
+    const [csrfToken, setCsrfToken] = useState('');
     const handleUserNameChange =(e)=>{
       setUserName(e.target.value);
     }
@@ -16,31 +16,44 @@ export default function Login(){
       setPassword(e.target.value);
     }
 
-    const data = {
+   
+
+    useEffect(() => {
+      fetch('http://localhost:4000/csrf')
+      .then(res => res.json())
+      .then(data => setCsrfToken(data.csrfToken))
+      .catch(err => console.error(err))
+    },[]);
+
+    const fdata = {
       username: username,
-      password: password
+      password: password,
+      
     }
     
+    
     function handleClick(){
+     
       fetch('http://localhost:4000/login',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
+          // 'X-CSRF-Token': csrfToken
         },
-        body: JSON.stringify({data})
-      }).then(response =>{
-        response.json();
-      }).catch(error => {console.error(error);})
+        body: JSON.stringify({fdata})
+      }).then(response => response.json())
+      .then(console.log(csrfToken))
+      .catch(error => {console.error(error);})
     }
     return(
         <>
         <form>
+        <input type="hidden" name="_csrf" value={csrfToken} />
         <label>Username: </label>
         <input type = "text"
           placeholder='Enter your Username'
           value ={username}
           onChange ={handleUserNameChange}
-          
         />
         <br></br>
         <label>Password: </label>
