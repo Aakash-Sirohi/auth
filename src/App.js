@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import {Route} from 'react-router';
@@ -14,6 +13,7 @@ function App() {
     <Routes>
     <Route exact path='/' element ={<Login/>}></Route>
     <Route path='/register' element ={<Register/>}></Route>
+    <Route path='/login' element ={<Login/>}></Route>
     </Routes>
 );
 }
