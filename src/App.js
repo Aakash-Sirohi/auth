@@ -1,9 +1,9 @@
 import './App.css';
 
 import {Route} from 'react-router';
-import Register from './pages/Register';
-import Login from './pages/Login';
 
+import Login from './components/Login';
+import SignUp from './components/signup/SignUp';
 import {
   BrowserRouter as Router,
   Routes
@@ -11,9 +11,9 @@ import {
 function App() {
   return (
     <Routes>
-    <Route exact path='/' element ={<Login/>}></Route>
-    <Route path='/register' element ={<Register/>}></Route>
+    <Route exact path='/' element ={<SignUp/>}></Route>
     <Route path='/login' element ={<Login/>}></Route>
+    <Route path='/signup' element ={<SignUp/>}></Route>
     </Routes>
 );
 }
