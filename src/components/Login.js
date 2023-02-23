@@ -2,30 +2,42 @@ import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Login(){
+
     // const navigate = useNavigate();
     // const handleClick = () => {
     //     navigate("/register");
     // }
+
     const [username,setUserName] = useState('');
     const [password,setPassword] = useState('');
     const [csrfToken, setCsrfToken] = useState('');
+    const [data,setData] =useState(null);
+
     const handleUserNameChange =(e)=>{
       setUserName(e.target.value);
     }
+
     const handlePasswordChange =(e)=>{
       setPassword(e.target.value);
     }
 
-   
 
     useEffect(() => {
-      fetch('http://localhost:4000/csrf')
-      .then(res => res.json())
-      .then(data => setCsrfToken(data.csrfToken))
-      .catch(err => console.error(err))
+      const fetchData = async () => {
+        const response = await fetch ('http://localhost:4000/csrf');
+        const data = await response.json();
+        setCsrfToken(data.csrfToken);
+      };
+      fetchData();
+      
     },[]);
 
-    console.log(csrfToken);
+    useEffect(() =>{
+      if(csrfToken){
+        document.cookie = `csrfToken=${csrfToken}; path=/`;
+      }
+    }, [csrfToken]);
+    console.log(data);
 
     const fdata = {
       username: username,
@@ -35,12 +47,12 @@ export default function Login(){
     
     
     function handleClick(){
-     
+    
       fetch('http://localhost:4000/login',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-          // 'X-CSRF-Token': csrfToken
+          //  'X-CSRF-Token': csrfToken
         },
         body: JSON.stringify({fdata})
       }).then(response => response.json())
