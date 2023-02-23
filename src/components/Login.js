@@ -25,6 +25,8 @@ export default function Login(){
       .catch(err => console.error(err))
     },[]);
 
+    console.log(csrfToken);
+
     const fdata = {
       username: username,
       password: password,

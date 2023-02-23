@@ -1,0 +1,16 @@
+
+
+.modal {
+    height: 488px;
+    width: 480px;
+    left: 0px;
+    top: 0px;
+    border-radius: 8px;
+    padding-left: 480px;
+    padding-right:480px ;
+  }
+
+  .modal-header{
+    font-family: '', sans-serif;
+    padding-top: 40px;
+  }
