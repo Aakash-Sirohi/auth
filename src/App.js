@@ -8,12 +8,16 @@ import {
   BrowserRouter as Router,
   Routes
 } from "react-router-dom";
+import OtpModal from './components/signup/otpmodal';
+import Experience from './components/signup/Experience';
 function App() {
   return (
     <Routes>
     <Route exact path='/' element ={<SignUp/>}></Route>
     <Route path='/login' element ={<Login/>}></Route>
     <Route path='/signup' element ={<SignUp/>}></Route>
+    <Route path='/otp' element={<OtpModal/>}></Route>
+    <Route path='/exp' element={<Experience/>}></Route>
     </Routes>
 );
 }
