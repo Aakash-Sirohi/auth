@@ -76,7 +76,7 @@ export default function OtpModal({onClose,title,emailorPhone,showSignUpModal}){
       
     
     return(
-        <>{showexpModal ? (<Experience  onClose={handleExpModalClose} title ={'Help us personalize your experience'}/>):( <div className="modal"  >
+        <>{showexpModal ? (<Experience phone={emailorPhone} onClose={handleExpModalClose} title ={'Help us personalize your experience'}/>):( <div className="modal"  >
         <div className="modal-content" onClick={e => e.stopPropagation()}>
           <div className="modal-header" >
             <div><label className="vo-text">{title}</label>

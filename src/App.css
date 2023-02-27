@@ -84,6 +84,9 @@ background-color: wheat;
   border-width:12px;
   margin-top: 100px;
 }
+.forpx{
+  padding-bottom: 40px;
+}
 .gs-text{
   /* display: flex;
   flex-direction: column;
@@ -261,21 +264,23 @@ margin-left:360px;
 
 .ex-text {
   
-width: 150px;
-height: 42px;
-margin: 40px;
-background: #FFFFFF;
-border-radius: 8px;
-color: #313034;
-/* Inside auto layout */
-font-feature-settings: 'ss01' on;
-flex: none;
-order: 0;
-flex-grow: 0;
-line-height: 42px;
-font-weight:700;
-font-size:32px;
-font-family:MyFont;
+  gap: 40px;
+  width: 178px;
+  height: 42px;
+  margin-left: 40px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  color: #313034;
+  /* Inside auto layout */
+  font-feature-settings: 'ss01' on;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  line-height: 42px;
+  font-weight:700;
+  font-size:24px;
+  font-family: 'MetropolisNF', sans-serif;
+  margin-top: 40px;
 } 
 
 .vo-text{
@@ -306,7 +311,7 @@ margin-top: 40px;
 .otp-sent-label{
   margin: 40px;
   font-family:'MetropolisNF', sans-serif; 
-
+  
   
 }
 
@@ -358,6 +363,40 @@ border-radius: 8px;
 }
 
 .Grade-btn{
-  width: 10px;
-  height: 10px;
+  width: 107px;
+  height: 68px;
+padding-right: 0px;
+margin-right: 28px;
+}
+
+.grades-div{
+  margin-left: 40px;
+}
+
+.chip{
+  box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 18px 20px;
+gap: 8px;
+
+width: 107px;
+height: 68px;
+
+/* supportive / Gray / 90 */
+
+background: #F3F4F6;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
+margin-left: 140px;
 }
