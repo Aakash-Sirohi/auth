@@ -44,27 +44,82 @@
 }
 
 .get-otp-button {
-  padding: 16px,32px,16px,32px;
+  
   width:400px;
   background: #3D2AE7;
   border-radius: 8px;
   height: 48px;
   border: 1px;
-
+  margin-left: 40px;
+ 
 }
 
 .get-otp-text{
   color: #FFFFFF;
   width: 66px;
-  height: 16px;
+  height: 20px;
   font-weight: bold;
-  font-family: MyFont;
+  font-family: 'MetropolisNF', sans-serif;
+}
+.root{
+background-color: wheat;
+
+
 }
 
-.google-button{
-
+.modal-header{
+  padding-top: 40px;
 }
-
+.modal{
+  width: 480px;
+  height: 488px;
+}
+.modal-content{
+  background-color: #FFFFFF;
+  width: 480px;
+  height: 488px;
+  border-radius: 8px;
+  padding:40px, 0px, 40px, 0px;
+  border-color: #1C1B1F;
+  border-width:12px;
+  margin-top: 100px;
+}
+.forpx{
+  padding-bottom: 40px;
+}
+.gs-text{
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
+  
+  gap: 40px;
+  width: 178px;
+  height: 42px;
+  margin-left: 40px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  color: #313034;
+  /* Inside auto layout */
+  font-feature-settings: 'ss01' on;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  line-height: 42px;
+  font-weight:700;
+  font-size:32px;
+  font-family: 'MetropolisNF', sans-serif;
+  margin-top: 40px;
+  }
+  .modal-close-button{
+    background-color: #FFFFFF;
+    border-style: none;
+    color: #929094;
+    position: absolute;
+    font-size:32px;
+    padding-top: 5px;
+    padding-left: 180px;
+    
+  }
 .mob-ph {
   margin-top: 62px;
   width: 400px;
@@ -75,75 +130,66 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+  margin: 40px;
   gap: 8px;
   border: 1px solid #E5E1E6;
   flex: none;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
-  
+  font-family: 'MetropolisNF', sans-serif;
   height: 48px;
 width: 400px;
 left: 0px;
 top: 0px;
 border-radius: 8px;
 padding: 12px 16px 12px 16px;
+margin-bottom: 0px;
 
 }
 
-.modal-close-button{
-  background-color: #FFFFFF;
-  border-style: none;
-  color: #929094;
-  position: absolute;
-  font-size:32px;
-  padding-top: 5px;
-  padding-left: 180px;
-  
+.message{
+  font-family:'MetropolisNF', sans-serif; 
+  margin-left: 40px;
 }
 
 
-.gs-text{
-/* display: flex;
-flex-direction: column;
-align-items: flex-start; */
 
-gap: 40px;
 
-width: 178px;
-height: 42px;
-
-background: #FFFFFF;
-border-radius: 8px;
-color: #313034;
-/* Inside auto layout */
-font-feature-settings: 'ss01' on;
-flex: none;
-order: 0;
-flex-grow: 0;
-line-height: 42px;
-font-weight:700;
-font-size:32px;
-font-family:MyFont;
-}
 
 .clabel{
   
-  padding-top: 40px;
-  padding-left: 140px;
-  font-family: MyFont;
-  width: 140px;
-  height: 18px;
+  padding-top: 20px;
+  padding-left: 0px;
+  font-family: 'MetropolisNF', sans-serif;
+  width: 480px;
+  height: 10px;
   font-weight: 400;
-  font-family: MyFont;
   color:  #1C1B1F;
   padding-bottom: 40px;
-  ;
+  
+}
+.cspan{
+  padding-left: 150px;
+  padding-bottom: 40px;
+
+  margin-bottom:180px;
 }
 
+.line1{
+  width: 40px;
 
-.line{
+transform: matrix(-1, 0, -9, 1, -110, 0);
+/* align-items: flex-start; */
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.line2{
   width: 60px;
 
 transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -153,30 +199,31 @@ align-items: flex-start;
 flex: none;
 order: 0;
 flex-grow: 0;
+margin-left:360px;
 }
 
 
 
 .google-button{
   height: 48px;
-  width: 160px;
+  width: 188px;
   left: 40px;
   top: 0px;
   border-radius: 100px;
-  margin-left: 21px;
+  margin-left: 40px;
   border: 1px solid #C6C6C6;
   background-color: #FFFFFF;
-  font-family: MyFont;
+  font-family: 'MetropolisNF', sans-serif;
 }
 
 .fb-button{
   height: 48px;
-  width: 160px;
+  width: 188px;
   left: 40px;
-  margin-left: 40px;
+  margin-left: 20px;
   top: 0px;
   border-radius: 100px;
-  font-family: MyFont;
+  font-family: 'MetropolisNF', sans-serif;
   border: 1px solid #C6C6C6;
   background-color: #FFFFFF;
   
@@ -194,10 +241,162 @@ flex-grow: 0;
  
   }
 .google-label{
-  
    text-shadow: #1C1B1F;
-    
+    color: #25164B;
+}
+.fb-label{
+  text-shadow: #1C1B1F;
+   color: #25164B;
+   
+}
 
+.sign-up{
+  background-color: rgb(255, 255, 255);
+  width: 480px;
+  height: 488px;
+  margin-left:480px ;
+}
+
+
+.otp-space{
+ height: 60px;
+}
+
+.ex-text {
+  
+  gap: 40px;
+  width: 178px;
+  height: 42px;
+  margin-left: 40px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  color: #313034;
+  /* Inside auto layout */
+  font-feature-settings: 'ss01' on;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  line-height: 42px;
+  font-weight:700;
+  font-size:24px;
+  font-family: 'MetropolisNF', sans-serif;
+  margin-top: 40px;
+} 
+
+.vo-text{
+  gap: 40px;
+  width: 178px;
+  height: 42px;
+  margin-left: 40px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  color: #313034;
+  /* Inside auto layout */
+  font-feature-settings: 'ss01' on;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  line-height: 42px;
+  font-weight:700;
+  font-size:32px;
+  font-family: 'MetropolisNF', sans-serif;
+  margin-top: 40px;
+}
+.otp-input {
+  display: flex;
+}
+.oslabel{
+margin-top: 40px;
+}
+.otp-sent-label{
+  margin: 40px;
+  font-family:'MetropolisNF', sans-serif; 
+  
   
 }
 
+.edit-btn{
+  background-color: white;
+  border: none;
+  font-family: 'MetropolisNF', sans-serif; 
+  font-weight: 400;
+  color: #3D2AE7;
+}
+.otp-input{
+  width: 392px;
+  
+  margin-left:40px;
+}
+.otp-input input {
+  width: 52px;
+  height: 48px;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 5px;
+ 
+  margin-top: 10px;
+  border: 1px solid #E5E1E6;
+border-radius: 8px;
+
+}
+
+.votpbtn{
+  
+  padding-top:140px;
+}
+.enabled-verify {
+  width:400px;
+  background: #3D2AE7;
+  border-radius: 8px;
+  height: 48px;
+  border: 1px;
+  margin-left: 40px;
+}
+
+.disabled-verify{
+  width:400px;
+  background: grey;
+  border-radius: 8px;
+  height: 48px;
+  border: 1px;
+  margin-left: 40px;
+}
+
+.Grade-btn{
+  width: 107px;
+  height: 68px;
+padding-right: 0px;
+margin-right: 28px;
+}
+
+.grades-div{
+  margin-left: 40px;
+}
+
+.chip{
+  box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 18px 20px;
+gap: 8px;
+
+width: 107px;
+height: 68px;
+
+/* supportive / Gray / 90 */
+
+background: #F3F4F6;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 1;
+margin-left: 140px;
+}

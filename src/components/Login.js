@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
 
 export default function Login(){
 
@@ -12,7 +12,7 @@ export default function Login(){
     const [password,setPassword] = useState('');
     const [csrfToken, setCsrfToken] = useState('');
     const [data,setData] =useState(null);
-
+    <Route path="/login" element = {<Login/>}/>;
     const handleUserNameChange =(e)=>{
       setUserName(e.target.value);
     }
