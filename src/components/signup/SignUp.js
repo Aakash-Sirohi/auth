@@ -38,10 +38,10 @@ export default function Register(){
     if(validateEmailOrPhoneNumber(emailorPhone)=='email'){
       console.log(validateEmailOrPhoneNumber(emailorPhone));
       fdata = {
-        email: emailorPhone,          
+        username: emailorPhone,          
       }
 
-      fetch('http://localhost:4000/getotp',{
+      fetch('http://localhost:4000/api/getotp',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -57,9 +57,9 @@ export default function Register(){
     else if(validateEmailOrPhoneNumber(emailorPhone)=='phone'){
       console.log(validateEmailOrPhoneNumber(emailorPhone));
       fdata = {
-        phone: emailorPhone,          
+        username: emailorPhone,          
       }
-      fetch('http://localhost:4000/getotp',{
+      fetch('http://localhost:4000/api/getotp',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -19,7 +19,7 @@ export default function OtpModal({onClose,title,emailorPhone,showSignUpModal}){
     // }else setShowExpModal(false);
     const otp = otpValues.join('');
     const fdata ={
-        email:emailorPhone,
+        username:emailorPhone,
         otp:otp
     }
 
@@ -51,7 +51,7 @@ export default function OtpModal({onClose,title,emailorPhone,showSignUpModal}){
 
       function verifyOTP(){
         console.log(emailorPhone);
-        fetch('http://localhost:4000/verifyotp',{
+        fetch('http://localhost:4000/api/verifyotp',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ export default function OtpModal({onClose,title,emailorPhone,showSignUpModal}){
             is_registered = data.is_registered;
             console.log(is_registered);
             console.log(data.message);
-            if(data.message=='OTP Verified!' && is_registered==1){
+            if(data.message=='User Authenticated!' && is_registered==1){
               navigate('/login');
             }else if(data.message=='OTP Verified!' && is_registered==0) {
               
